@@ -57,11 +57,6 @@ class WordController extends \yii\web\Controller
 
         $wordInBase = Word::findOne(['word' => $guess]);
 
-        return [
-            'kills' => 3,
-            'hits' => 3,
-            'guess' => $wordInBase['word']
-        ];
         if ($wordInBase) {
             $wordInBase instanceof Word;
             $wordInBase['entered'] = $wordInBase['entered'] + 1;
@@ -99,14 +94,6 @@ class WordController extends \yii\web\Controller
      */
     public function actionGetword() {
         return mb_strtoupper(Yii::$app->session['word']);
-    }
-
-    /**
-     * просто инфа
-     * @return bool
-     */
-    public function actionInfo() {
-        return phpinfo();
     }
 
     /**
@@ -193,11 +180,18 @@ class WordController extends \yii\web\Controller
         }
     }
 
+    /**
+     * Возвращает таблицу рекордов
+     * @return array
+     */
     private function getHighscores(){
         $highscores = Result::find()->where(['win' => 1])->orderBy(['score' => SORT_DESC])->limit(10)->all();
         return $highscores;
     }
 
+    /**
+     * Записывает рекорд
+     */
     public function actionUpdatehs() {
         $request = Yii::$app->request;
         $name = $request->post('name');
