@@ -1,0 +1,316 @@
+html,
+body {
+    height: 100%;
+}
+
+.wrap {
+    width:1000px;
+    min-height: 100%;
+    height: auto;
+    margin: 0 auto -60px;
+    padding: 0 0 60px;
+    text-align: center;
+    position: relative;
+}
+.gameWrapper{
+    width:520px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+
+.container {
+    width: 100%;
+}
+
+.footer {
+    height: 60px;
+    background-color: #f5f5f5;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.jumbotron {
+    text-align: center;
+    background-color: transparent;
+}
+
+.jumbotron .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+}
+
+.not-set {
+    color: #c55;
+    font-style: italic;
+}
+
+/* add sorting icons to gridview sort links */
+a.asc:after, a.desc:after {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    padding-left: 5px;
+}
+
+a.asc:after {
+    content: /*"\e113"*/ "\e151";
+}
+
+a.desc:after {
+    content: /*"\e114"*/ "\e152";
+}
+
+.sort-numerical a.asc:after {
+    content: "\e153";
+}
+
+.sort-numerical a.desc:after {
+    content: "\e154";
+}
+
+.sort-ordinal a.asc:after {
+    content: "\e155";
+}
+
+.sort-ordinal a.desc:after {
+    content: "\e156";
+}
+
+.grid-view th {
+    white-space: nowrap;
+}
+
+.hint-block {
+    display: block;
+    margin-top: 5px;
+    color: #999;
+}
+
+.error-summary {
+    color: #a94442;
+    background: #fdf7f7;
+    border-left: 3px solid #eed3d7;
+    padding: 10px 20px;
+    margin: 0 0 15px 0;
+}
+
+div.status{
+    font-size: 18px;
+}
+
+#puzzleTable{
+    margin: 10px auto 20px;
+
+}
+#puzzleTable .letter{
+    display: inline-block;
+    width: 100px;
+    height: 150px;
+    border: 2px solid black;
+    vertical-align: top;
+    font-size: 100px;
+    line-height: 150px;
+    color: #666;
+}
+#wordInput{
+    font-size: 80px;
+    width: 400px;
+    height: 100px;
+    line-height: 90px;
+    padding: 5px;
+    letter-spacing: 10px;
+    margin-left: 2px;
+}
+#wordCheck{
+    margin: -30px 0 0 35px;
+}
+#wordInputForm{
+    width: 100%;
+    text-align: left;
+}
+#wordStats{
+    font-size: 18px;
+    color: #009;
+}
+#wordStats span{
+    font-style: italic;
+}
+#guessesTable{
+    margin: 20px 0;
+    text-align:left;
+    width:100%;
+    border-collapse: collapse;
+    font-size:20px;
+}
+#guessesTable td{
+    border:1px solid #000;
+    padding:1px 5px;
+}
+#guessesTable tr td:first-of-type{
+    width:300px;
+}
+td.guessWord{
+    font-style: italic;
+}
+td.guessKills{
+    color:#e51717;
+    font-weight: bold;
+    text-align:center;
+}
+td.guessHits{
+    color:#eea236;
+    font-weight: bold;
+    text-align:center;
+}
+
+.resignButton{
+    cursor: pointer;
+}
+
+#scoreboard{
+    position: absolute;
+    top: 85px;
+    left: 10px;
+    width: 200px;
+    border-radius: 10px;
+    height: 100px;
+    border: 2px solid black;
+    background-color: #fec;
+}
+#scoreboard .movesCount, #scoreboard .timeCount{
+    line-height:48px;
+    height: 48px;
+    text-align: left;
+    padding-left: 30px;
+}
+#scoreboard .movesCount{
+    border-bottom: 1px solid #000;
+}
+#scoreboard .timeCount span{
+    vertical-align: middle;
+    font-size: 22px;
+    color: #006;
+    margin-left: 30px;
+    letter-spacing: 2px;
+}
+#scoreboard .movesCount span{
+    vertical-align: middle;
+    font-weight: bold;
+    font-size: 32px;
+    color: #006;
+    margin-left: 55px;
+}
+
+#highscores{
+    position: absolute;
+    right: 10px;
+    top: 85px;
+    width: 200px;
+    padding: 5px 0 15px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    background-color: #cfd;
+}
+#highscores .highscoresHeader{
+    font-size: 18px;
+    line-height:24px;
+    border-bottom: 1px solid #000;
+    padding-bottom: 5px;
+}
+#highscores #highscoresTable{
+    width: 100%;
+    border-collapse: collapse;
+}
+#highscores #highscoresTable td{
+    text-align: left;
+}
+#highscores #highscoresTable tr{
+    border-bottom: 1px dotted #336;
+    height:22px;
+}
+#highscores #highscoresTable tr:first-of-type{
+    background-color: #fd3;
+}
+#highscores #highscoresTable tr:nth-of-type(2){
+    background-color: #d94;
+}
+#highscores #highscoresTable tr:nth-of-type(3){
+    background-color: #eee;
+}
+#highscores #highscoresTable tr:last-of-type{
+    border-bottom: 1px solid #000;
+}
+#highscores #highscoresTable tr td:first-of-type{
+    width: 140px;
+    padding: 0 10px;
+}
+#highscores #highscoresTable tr td:last-of-type{
+    width: 40px;
+    padding-right:10px;
+    font-size: 16px;
+    color: #0000CC;
+}
+
+#scorePopUp{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width:300px;
+    height:150px;
+    margin: -75px 0 0 -150px;
+    padding: 10px;
+    z-index: 2;
+    border: 1px solid #666;
+    border-radius: 10px;
+    background: #ffe;
+    box-shadow: 0 0 3px #444;
+}
+#scorePopUp .scorePopUpHeader{
+    margin-bottom: 10px;
+}
+#scorePopUp .scoreHsForm{
+    margin-bottom: 10px;
+}
+#scorePopUp .scoreHsInput{
+    margin-top: 3px;
+}
+#overlay{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(200, 200, 200, 0.7);
+}
+
+/* Раздел "Подтверждение слов" */
+#verifyTable{
+    width: 400px;
+    margin: 0 auto 10px;
+    border-collapse: collapse;
+}
+#verifyTable tr{
+    border: 1px solid #333;
+}
+#verifyTable tr td{
+    padding: 3px;
+}
+#verifyTable tr td:first-of-type{
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+}
+#verifyTable .verifyWord{
+    color: green;
+    cursor: pointer;
+}
+#verifyTable .deleteWord{
+    color: red;
+    cursor: pointer;
+}
